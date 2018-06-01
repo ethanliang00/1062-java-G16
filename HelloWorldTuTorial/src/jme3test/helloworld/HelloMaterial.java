@@ -58,16 +58,21 @@ public class HelloMaterial extends SimpleApplication {
     Material sphereMat = new Material(assetManager,
         "Common/MatDefs/Light/Lighting.j3md");
     sphereMat.setTexture("DiffuseMap",
-        assetManager.loadTexture("Textures/Terrain/Pond/Pond.jpg"));
-    sphereMat.setTexture("NormalMap",
-        assetManager.loadTexture("Textures/Terrain/Pond/Pond_normal.png"));
+        assetManager.loadTexture(
+            "photo_2018-05-28_02-31-33.jpg"));
+//            "Textures/Terrain/Pond/Pond.jpg"));
+            
+//    sphereMat.setTexture("NormalMap",
+//        assetManager.loadTexture(
+//            "Textures/Terrain/Pond/Pond_normal.png"));
     sphereMat.setBoolean("UseMaterialColors",true);
     sphereMat.setColor("Diffuse",ColorRGBA.White);
-    sphereMat.setColor("Specular",ColorRGBA.White);
-    sphereMat.setFloat("Shininess", 64f);  // [0,128]
+    sphereMat.setColor("Specular",ColorRGBA.Red);
+    sphereMat.setFloat("Shininess", 128f);  // [0,128]
     sphereGeo.setMaterial(sphereMat);
     sphereGeo.setLocalTranslation(0,2,-2); // Move it a bit
     sphereGeo.rotate(1.6f, 0, 0);          // Rotate it a bit
+    
     rootNode.attachChild(sphereGeo);
 
     /** Must add a light to make the lit object visible! */
