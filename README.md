@@ -9,9 +9,7 @@
 怪物1.冰鎮古龍
 ![照片不見惹QWQ](./resourse/screen%20shots/333.PNG "QWQ")
 二、場景
-
-
-
+![照片不見惹QWQ](https://github.com/Isekai-Seikatsu/1062-java-G16/blob/master/resourse/screen%20shots/%E5%A0%B4%E6%99%AF.png "QWQ")
 ### 待完成事項
 [TODO](https://github.com/Isekai-Seikatsu/1062-java-G16/issues?q=is%3Aissue+is%3Aopen+label%3ATODO "幹你看三小")
 
