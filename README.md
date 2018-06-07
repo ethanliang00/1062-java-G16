@@ -4,9 +4,10 @@
 一、角色完成動作和外表
 
 角色1.肌肉人
+![照片不見惹QWQ](https://github.com/Isekai-Seikatsu/1062-java-G16/blob/master/resourse/screen%20shots/擷取.PNG "QWQ")
 
-
-
+怪物1.冰鎮古龍
+![照片不見惹QWQ](./resourse/screen%20shots/333.PNG "QWQ")
 二、場景
 
 
@@ -15,3 +16,6 @@
 
 ### 里程碑
 [Road Map](https://github.com/Isekai-Seikatsu/1062-java-G16/wiki "QWQ")
+
+
+
