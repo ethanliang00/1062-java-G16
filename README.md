@@ -15,3 +15,7 @@
 
 ### 里程碑
 [Road Map](https://github.com/Isekai-Seikatsu/1062-java-G16/wiki "QWQ")
+
+
+
+![照片不見惹QWQ](https://github.com/Isekai-Seikatsu/1062-java-G16/blob/master/resourse/screen%20shots/333.PNG "QWQ")
