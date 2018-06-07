@@ -13,6 +13,13 @@
 ### 待完成事項
 [TODO](https://github.com/Isekai-Seikatsu/1062-java-G16/issues?q=is%3Aissue+is%3Aopen+label%3ATODO "幹你看三小")
 
+- [ ] 角色技能實作
+- [x] 小兵行走
+- [ ] 操控角色
+- [ ] 碰撞
+- [ ] 第三人稱視角
+- [ ] 第一人稱視角
+- [ ] Clean Code ??
 ### 里程碑
 [Road Map](https://github.com/Isekai-Seikatsu/1062-java-G16/wiki "QWQ")
 
