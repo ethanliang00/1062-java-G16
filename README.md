@@ -4,7 +4,7 @@
 一、角色完成動作和外表
 
 角色1.肌肉人
-
+![照片不見惹QWQ](https://github.com/Isekai-Seikatsu/1062-java-G16/blob/master/resourse/screen%20shots/擷取.PNG "QWQ")
 
 
 二、場景
