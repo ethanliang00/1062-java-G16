@@ -9,7 +9,7 @@
 
 角色2.侏儒
 
-![照片不見惹QWQ](https://github.com/Isekai-Seikatsu/1062-java-G16/blob/master/resourse/screen%20shots/dwarw.PNG"馮駿林")
+![照片不見惹QWQ](https://github.com/Isekai-Seikatsu/1062-java-G16/blob/master/resourse/screen%20shots/dwarw.PNG "馮駿林")
 
 怪物1.冰鎮古龍
 
