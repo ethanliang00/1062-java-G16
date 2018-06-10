@@ -30,4 +30,4 @@
 [Road Map](https://github.com/Isekai-Seikatsu/1062-java-G16/wiki "QWQ")
 
 ### 實際影片
-![影片下去了](https://github.com/Isekai-Seikatsu/1062-java-G16/blob/master/resourse/screen%20video/2018-06-10%20PM%2001-51.mp4 "南瓜侏儒")
+https://www.youtube.com/watch?v=GRcz-AfMSkY
