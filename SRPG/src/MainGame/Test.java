@@ -19,6 +19,7 @@ import com.jme3.scene.shape.Sphere;
 public class Test extends SimpleApplication implements ActionListener {
 
     private BulletAppState bulletAppState;
+    private SceneAppState sceneApp;
     private Node scene;
     private Geometry marker;
 
@@ -29,15 +30,12 @@ public class Test extends SimpleApplication implements ActionListener {
 
     @Override
     public void simpleInitApp() {
-//        stateManager.attach(new SceneAppState());
-        scene = (Node) assetManager.loadModel("Scenes/newScene.j3o");
-        rootNode.attachChild(scene);
+        sceneApp = new SceneAppState();
 
+        stateManager.attach(sceneApp);
 
-        scene.move(new Vector3f(0, -10f, 0));
-
-        flyCam.setMoveSpeed(100);
-        flyCam.setEnabled(false);
+//        flyCam.setMoveSpeed(100);
+//        flyCam.setEnabled(false);
         setupLights();
         setupKeys();
         initMark();
@@ -78,6 +76,8 @@ public class Test extends SimpleApplication implements ActionListener {
 
     @Override
     public void onAction(String name, boolean isPressed, float tpf) {
+        scene = sceneApp.getSceneNode();  // current coding situation
+        System.out.println(scene);
         if (name.equals("Click")) {
 
             CollisionResults results = new CollisionResults();
@@ -87,10 +87,13 @@ public class Test extends SimpleApplication implements ActionListener {
             Ray ray = new Ray(click3d, dir);
 
             scene.collideWith(ray, results);
+
             if (results.size() > 0) {
                 marker.setLocalTranslation(results.getClosestCollision().getContactPoint());
                 rootNode.attachChild(marker);
+
             }
+
         } else {
             rootNode.detachChild(marker);
         }
