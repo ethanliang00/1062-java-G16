@@ -14,6 +14,7 @@ public class Test extends SimpleApplication implements ActionListener {
     private BulletAppState bulletAppState;
     private SceneAppState sceneApp;
     private CharactorAppState playerApp;
+    private InteractionAppState inputHandleApp;
 
 
 
@@ -32,9 +33,9 @@ public class Test extends SimpleApplication implements ActionListener {
         sceneApp = new SceneAppState();
         playerApp = new CharactorAppState();
         bulletAppState = new BulletAppState();
-        stateManager.attach(bulletAppState);
-        stateManager.attach(sceneApp);
-        stateManager.attach(playerApp);
+        inputHandleApp = new InteractionAppState();
+        
+        stateManager.attachAll(bulletAppState, sceneApp, playerApp, inputHandleApp);
 
 //        stateManager.attach(sceneApp);
         flyCam.setMoveSpeed(100);

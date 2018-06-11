@@ -3,14 +3,13 @@ package MainGame;
 import com.jme3.app.Application;
 import com.jme3.app.SimpleApplication;
 import com.jme3.app.state.BaseAppState;
-import com.jme3.asset.ModelKey;
 import com.jme3.bullet.BulletAppState;
 import com.jme3.bullet.collision.shapes.CollisionShape;
 import com.jme3.bullet.control.RigidBodyControl;
 import com.jme3.bullet.util.CollisionShapeFactory;
+import com.jme3.math.ColorRGBA;
 import com.jme3.math.Vector3f;
 import com.jme3.scene.Node;
-import com.jme3.scene.Spatial;
 
 public class SceneAppState extends BaseAppState {
 
@@ -36,8 +35,8 @@ public class SceneAppState extends BaseAppState {
         getStateManager().getState(BulletAppState.class).getPhysicsSpace().add(floorControl);
         getStateManager().getState(BulletAppState.class).getPhysicsSpace().addAll(sceneNode);
         System.out.println("SceneAppState Initialize... DONE");
+        app.getViewPort() .setBackgroundColor(new ColorRGBA(66f/255f, 134f/255f, 244f/255f, 0.5f));
 
-        
     }
 
     @Override
