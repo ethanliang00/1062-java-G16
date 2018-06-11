@@ -12,7 +12,6 @@ import com.jme3.scene.Geometry;
 import com.jme3.scene.Node;
 import com.jme3.scene.Spatial;
 import com.jme3.scene.shape.Box;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class CharactorAppState extends BaseAppState {
@@ -75,16 +74,6 @@ public class CharactorAppState extends BaseAppState {
             app.getCamera().lookAt(charactorNode.getLocalTranslation(), new Vector3f(0.0F, 1.0F, 0.0F));
         }
 
-        if (charactorNode.getUserData("TargetDestination") != null) {
-            LOGGER.log(Level.INFO, "TargetDestination: {0}", charactorNode.getUserData("TargetDestination"));
-            Vector3f direction = ((Vector3f) charactorNode.getUserData("TargetDestination")).subtract(charactorNode.getWorldTranslation());
-            direction = new Vector3f(direction.x, 0, direction.z).normalizeLocal();
-
-            LOGGER.log(Level.INFO, "direction: {0}, isUnit: {1}", new Object[]{direction, direction.isUnitVector()});
-            charactorControl.setWalkDirection(direction.mult((float) charactorNode.getUserData("MovementSpeed")));
-        } else {
-            charactorControl.setWalkDirection(new Vector3f(0, 0, 0));
-        }
     }
 
     public Spatial setupCharactor() {
@@ -104,5 +93,9 @@ public class CharactorAppState extends BaseAppState {
 
     public Node getCharactorNode() {
         return charactorNode;
+    }
+
+    public BetterCharacterControl getCharactorControl() {
+        return charactorControl;
     }
 }
