@@ -47,6 +47,8 @@ public class ServerMain extends SimpleApplication {
         bulletAppState = new BulletAppState();
 
         stateManager.attachAll(bulletAppState, sceneApp, playerApp);
+        
+        server.addMessageListener(new MessageHandler());
     }
 
     @Override

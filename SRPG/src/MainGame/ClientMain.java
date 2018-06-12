@@ -50,6 +50,11 @@ public class ClientMain extends SimpleApplication {
 
         stateManager.attachAll(bulletAppState, sceneApp, playerApp, inputHandleApp);
 
+        // flycam settings
+        flyCam.setMoveSpeed(100);
+        
+        this.setPauseOnLostFocus(false);
+
         messageQueue = new ConcurrentLinkedQueue<>();
         charactorPosQueue = new ConcurrentLinkedQueue<>();
 
@@ -59,11 +64,18 @@ public class ClientMain extends SimpleApplication {
         inputManager.addListener(new ActionListener() {
             @Override
             public void onAction(String name, boolean isPressed, float tpf) {
-                Vector3f pt = playerApp.getCharactorNode().getUserData("TargetDestination");
-//                client.send(new UtNetworking.UserActionMessage((Vector3f) playerApp.getCharactorNode().getUserData("TargetDestination")));
-                client.send(new UtNetworking.UserActionMessage(pt));
 
-                LOGGER.log(Level.INFO, "TargetDestination: " + pt);
+                switch (name) {
+
+                    case "Movement":
+                        Vector3f pt = playerApp.getCharactorNode().getUserData("TargetDestination");
+//                client.send(new UtNetworking.UserActionMessage((Vector3f) playerApp.getCharactorNode().getUserData("TargetDestination")));
+                        client.send(new UtNetworking.UserActionMessage(pt));
+
+                        LOGGER.log(Level.INFO, "TargetDestination: {0}", pt);
+
+                        break;
+                }
             }
 
         }, "Movement");
